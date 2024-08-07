@@ -15,6 +15,6 @@ function bubbleSort(arr) {
 }
 
 // 示例用法
-var myArray = [3, 1, 4, 2];
+var myArray = [3, 8, 6, 2,8,2,7,1];
 bubbleSort(myArray);
 console.log(myArray); // 输出 [1, 2, 3, 4]
