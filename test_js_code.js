@@ -1,3 +1,4 @@
+//冒泡排序
 function bubbleSort(arr) {
     var len = arr.length;
     for (var i = 0; i < len - 1; i++) {
@@ -18,3 +19,28 @@ function bubbleSort(arr) {
 var myArray = [3, 5, 4, 1 ,2 ,6 ,8, 9];
 bubbleSort(myArray);
 console.log(myArray); // 输出 [1, 2, 3, 4]
+
+//选择排序
+function selectionSort(arr) {
+    let n = arr.length;
+    for (let i = 0; i < n - 1; i++) {
+        // 找到最小元素的索引
+        let minIndex = i;
+        for (let j = i + 1; j < n; j++) {
+            if (arr[j] < arr[minIndex]) {
+                minIndex = j;
+            }
+        }
+        // 交换
+        if (minIndex !== i) {
+            let temp = arr[i];
+            arr[i] = arr[minIndex];
+            arr[minIndex] = temp;
+        }
+    }
+    return arr;
+}
+
+// 示例使用
+let array = [64, 25, 12, 22, 11];
+console.log("选择排序结果:", selectionSort(array));
